@@ -1,0 +1,26 @@
+.conteiner-card {
+    margin: 0%;
+    background-color: #15ff0062;
+    /* box-sizing: border-box; */
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+h2 {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}

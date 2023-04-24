@@ -1,0 +1,11 @@
+.conteiner-nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+
+/* #37ff306c */
