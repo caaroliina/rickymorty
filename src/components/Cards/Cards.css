@@ -1,6 +1,7 @@
 .conteriner-cards {
-    width: 38%;
+    width: 95%;
     height: 50%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
