@@ -3,8 +3,8 @@ body {
   font-family: 'Major Mono Display', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #202021;
-  background-image: url(images/rickymorty-pixel.gif);
+  background-color: #222222;
+  /* background-image: url(images/rickymorty-pixel.gif); */
   background-repeat: no-repeat;
   background-position: top ;
   background-size: 160vh 100vh;

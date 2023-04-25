@@ -1,5 +1,5 @@
-import Card from './Card';
-import "../css/Cards.css"
+import Card from '../Card/Card';
+// import "./Cards.css"
 
 function Cards({ characters, onClose }) {
    return (
