@@ -1,4 +1,4 @@
-// import "./SearchBar.css";
+import "./SearchBar.css";
 import { useState } from "react";
 
 function SearchBar({ onSearch }) {
@@ -14,7 +14,7 @@ function SearchBar({ onSearch }) {
 
          <input type = 'search' onChange = { handleChange } value={ id } />
 
-         <button onClick = { () => onSearch(id) }> Agregar </button>
+         <button className="button-add" onClick = { () => onSearch(id) }> Agregar </button>
 
       </div>
    );

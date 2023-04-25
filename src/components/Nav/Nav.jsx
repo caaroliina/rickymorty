@@ -1,17 +1,16 @@
 import SearchBar from "../SearchBar/SearchBar";
-// import "./Nav.css"
+import "./Nav.css"
 import { NavLink } from "react-router-dom";
-// import About from "./About"
 
 function Nav ({ onSearch }){
     return (
     <div className="conteiner-nav">
-        
+        {/* <img src="./" alt="" /> */}
         <NavLink to="/about">
-            <button> About </button>
+            <button className="button-nav"> About </button>
         </NavLink>
         <NavLink to="/Characters">
-            <button> Personajes </button>    
+            <button className="button-nav"> Personajes </button>    
         </NavLink>
 
         <SearchBar onSearch = { onSearch } />

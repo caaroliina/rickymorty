@@ -1,6 +1,6 @@
-/* .conteriner-cards {
+.conteriner-cards {
+    width: 38%;
+    height: 50%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-} */
+    justify-content: center;
+}
