@@ -8,7 +8,7 @@ function Form (){
         password: "",
     });
 
-    const [errors, setErrors] = useState({});
+    // const [errors, setErrors] = useState({});
 
     const handleChange = (event) => {
         setUserData({
