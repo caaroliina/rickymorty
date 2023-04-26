@@ -3,13 +3,15 @@ import Cards from './components/Cards/Cards';
 import Nav from './components/Nav/Nav';
 import { useState } from 'react';
 import axios from "axios";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import About from "./components/About/About"
 import Detail from './components/Detail/Detail';
+import Form from './components/Form/Form';
 
 
 function App() {
 
+   const location = useLocation();
    const [ characters, setCharacters ] = useState([]);
 
    function onSearch(id) {
@@ -27,14 +29,18 @@ function App() {
       setCharacters(characterFilter);
    };
    
+
    return (
       <div className='App'>
-            <Nav onSearch = { onSearch } />
-            <Routes>
-               <Route path='/about' element = { <About /> } />
-               <Route path='/characters' element = { <Cards characters={ characters } onClose={ onClose } /> }/>
-               <Route path={ '/detail/:id' } element = { < Detail/> } />
-            </Routes>
+         {
+            location.pathname !== '/' && <Nav onSearch = { onSearch } />
+         }
+         <Routes>
+            <Route path='/' element= {<Form />}/>
+            <Route path='/about' element = { <About /> } />
+            <Route path='/characters' element = { <Cards characters={ characters } onClose={ onClose } /> }/>
+            <Route path={ '/detail/:id' } element = { < Detail/> } />
+         </Routes>
             
       </div>
    );

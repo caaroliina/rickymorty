@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "./Detail.css"
 
 const Detail = () => {
 
@@ -20,7 +21,7 @@ const Detail = () => {
   }, [id]);
   
   return (
-    <div>
+    <div className="conteiner-character">
       {
         character ? (<div> 
           <h1> { character.name }</h1>

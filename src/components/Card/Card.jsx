@@ -11,7 +11,7 @@ function Card({ id, name, status, species, gender, origin, image, onCLose }) {
          <Link to={`/detail/${id}`} >
             <h3 className="nombres">{ name }</h3>
          </Link>
-         <h2> { species }</h2>
+         {/* <h2> { species }</h2> */}
          <h2> { status }</h2>
          <h2> { gender }</h2>
          <h2> { origin }</h2>

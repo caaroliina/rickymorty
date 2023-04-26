@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function SearchBar({ onSearch }) {
 
-   const [id, setId] = useState("");
+   const [id, setId] = useState("");  
 
    const handleChange = (event) => {
       setId(event.target.value);
@@ -12,9 +12,9 @@ function SearchBar({ onSearch }) {
    return (
       <div className = "search-bar">
 
-         <input type = 'search' onChange = { handleChange } value={ id } />
+         <input type ='search' onChange ={ handleChange } value={ id } />
 
-         <button className="button-add" onClick = { () => onSearch(id) }> Agregar </button>
+         <button className ="button-add" onClick ={ () => onSearch(id) }> Agregar </button>
 
       </div>
    );
