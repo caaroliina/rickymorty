@@ -3,10 +3,11 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Major Mono Display', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #222222;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  background-color: #2b2929;
   background-image: url(images/rickymorty-pixel.gif);
+  /* background-image: url(images/stars.jpg); */
   background-repeat: no-repeat;
   background-position: top ;
   background-size: 160vh 100vh;

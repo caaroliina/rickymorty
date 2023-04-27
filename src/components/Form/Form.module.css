@@ -1,3 +1,8 @@
+.background{
+    width: 100vh;
+    height: 100vh;
+}
+
 .form{
     width: 100vh;
     height: 100vh;
@@ -39,6 +44,10 @@
     height: 30px;
     background-color: rgb(23, 23, 23);
     font-size: 18px;
+}
+
+.error {
+    color: red;
 }
 
 .button{
