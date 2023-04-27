@@ -1,8 +1,8 @@
-import "./About.css"
+import style from "./About.module.css"
 
 function About () {
     return (
-        <div className="conteiner-about">
+        <div className={style.conteiner}>
             <h1> Pagina del ABOUT </h1>
         </div>
     )

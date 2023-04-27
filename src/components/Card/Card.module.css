@@ -1,11 +1,11 @@
-.conteiner-card {
+.conteiner {
     margin: 0 5% 5%;
     background-color: #15ff0062;
     width: 300px;
     height: 450px;
 }
 
-.button-close{
+.button{
     height: 20px;
     width: 20px;
     position: relative;

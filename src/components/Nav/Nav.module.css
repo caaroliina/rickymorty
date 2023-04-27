@@ -1,4 +1,4 @@
-.conteiner-nav {
+.conteiner {
     width: 100%;
     height: 60px;
     background-color: #000000;
@@ -8,13 +8,13 @@
     margin-bottom: 30px;
 }
 
-.titulo-home{
+.titulo{
     width: 150px;
     height: 60px;
     margin: 0 0 0 25px;
 }
 
-.button-nav{
+.button{
     display: flex;
     justify-content: center;
     align-items: center;
