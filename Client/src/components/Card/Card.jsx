@@ -20,9 +20,7 @@ function Card({ id, name, status, species, gender, origin, image, onCLose, addFa
 
    useEffect(() => {
       myFavorites.forEach((fav) => {
-         if (fav.id === id) {
-            setIsFav(true);
-         }
+         { fav.id === id && setIsFav(true); }
       });
    }, [myFavorites]);
    

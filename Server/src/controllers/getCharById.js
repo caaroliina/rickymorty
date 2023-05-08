@@ -20,7 +20,7 @@ const getCharById = (res, id) => {
     .catch(error => {
         return res
                 .writeHead(500, {"content-type": "text/plain"})
-                .end(error.message)
+                .end(error.message);
     })                    
 }
 
