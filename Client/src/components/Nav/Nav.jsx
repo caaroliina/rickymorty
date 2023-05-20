@@ -1,8 +1,10 @@
 import style from "./Nav.module.css"
 import SearchBar from "../SearchBar/SearchBar";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Nav ({ onSearch, setAccess }){
+
+    const { pathname }  = useLocation()
 
     const handleLogOut = ()=>{
         setAccess(false);
@@ -10,6 +12,10 @@ function Nav ({ onSearch, setAccess }){
 
     return (
         <nav className={style.conteiner}>
+
+        {   
+            pathname.includes("/home") && <SearchBar onSearch= {onSearch} />
+        } 
 
             <img className={style.titulo} src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="Home rick and Morty" />
             

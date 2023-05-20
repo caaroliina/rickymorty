@@ -1,12 +1,7 @@
-const http = require("http");
-const { getCharById } = require("./controllers/getCharById.js");
+const server = require("./app")
 const PORT = 3001;
+const { conn } = require('./DB_connection')
 
-http.createServer((req, res)=>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    if(req.url.includes('/rickandmorty/character')){
-        let id = req.url.split("/").at(-1);
-        getCharById(res, +id);
-    }
+conn.sync({ force: true }).then(()=> {
+    server.listen(PORT, ()=> console.log('Server raised in port: ' + PORT))
 })
-.listen(PORT, 'localhost');

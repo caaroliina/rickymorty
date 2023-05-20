@@ -1,16 +1,7 @@
 import style from "./Form.module.css"
 import logo from "../../images/wannaDie.png"
 import { useState } from "react";
-// import { useDispatch } from 'react-redux';
 import validation from "./validation";
-
-
-// const validation = (user) =>{
-//     const errors ={}
-//     if(!validationEmail) errors.email = "hay errores en la contraseña"
-//     if (!validationContrasena) errors.contrasena = "Los tickets deben ser un numero positivo"
-//     return errors
-// }
 
 function Form ({ login }){
     
@@ -36,6 +27,7 @@ function Form ({ login }){
     const handleSubmit = (event) => {
         event.preventDefault();
         login(userData);
+        console.log("click");
     }
 
     return (
@@ -55,7 +47,9 @@ function Form ({ login }){
                             >
                         </input> 
                 </label> 
-                { errors.email && <p className={style.error}>{errors.email}</p> }
+                <div className="error">
+                    { errors.email && <p className={style.error}>{errors.email}</p> }
+                </div>
                 <label 
                     className={style.label}
                     htmlFor="password"> Contraseña 
@@ -68,9 +62,10 @@ function Form ({ login }){
                         >
                         </input>
                 </label> 
-                { errors.password && <p className={style.error}>{errors.password}</p> }
-                <button 
-                    className={style.button} > Submit 
+                <div className="error">
+                    { errors.password && <p className={style.error}>{errors.password}</p> }
+                </div>
+                <button type="submit" className={style.button} > Submit 
                 </button>
             </div>
         </form>

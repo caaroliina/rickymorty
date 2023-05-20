@@ -4,7 +4,7 @@ import style from "./Cards.module.css"
 function Cards({ characters, onClose }) {
    return (
       <div className={style.conteriner}>
-         {characters.map( ({ id, name, status, gender, origin, image }) => {
+         {characters.map( ({ id, name, status, gender, origin, image}) => {
             return (
                <Card 
                   key = { id }
@@ -15,7 +15,6 @@ function Cards({ characters, onClose }) {
                   origin = { origin.name }
                   image = { image }
                   onCLose = { onClose }
-                  // key = {key}
                />);
          })}
       </div>

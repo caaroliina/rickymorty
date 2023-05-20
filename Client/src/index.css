@@ -15,6 +15,7 @@ body {
   background-image: url(images/rickymorty-pixel.gif);
   /* background-image: url(images/stars.jpg); */
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: top ;
   background-size: 160vh 100vh;
 }

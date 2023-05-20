@@ -5,6 +5,13 @@ function SearchBar({ onSearch }) {
 
    const [id, setId] = useState("");  
 
+   const handleEnter = (event) => {
+      if (event.key === 'Enter') {
+         props.onSearch(id);
+         setId("")
+      }
+   }
+
    const handleChange = (event) => {
       setId(event.target.value);
    }
@@ -12,7 +19,7 @@ function SearchBar({ onSearch }) {
    return (
       <div className = {style.search}>
 
-         <input type ='search' onChange ={ handleChange } value={ id } />
+         <input type ='search' onChange ={ handleChange } value={ id } onKeyUp={handleEnter} />
 
          <button className ={style.button} onClick ={ () => onSearch(id) }> Agregar </button>
 

@@ -4,9 +4,11 @@ import {connect} from "react-redux";
 import { useState, useEffect } from "react";
 import { addFav, removeFav } from "../../redux/action"
 
-function Card({ id, name, status, species, gender, origin, image, onCLose, addFav, removeFav }) {
+function Card({ id, name, status, species, gender, origin, image, onCLose, addFav, removeFav, myFavorites, onClose}) {
 
    const [isFav, setIsFav] = useState(false);
+
+   const location = useLocation()
 
    const handleFavorite = () => {
       if (isFav){
@@ -32,6 +34,11 @@ function Card({ id, name, status, species, gender, origin, image, onCLose, addFa
          <div className={style.button}><button className={style.onCLose}  onClick={ () => onCLose(id) }> X </button></div>
 
          <img src={ image } alt='' />
+
+         {
+            !pathname.includes('/favorites') &&
+            <button className={style.btn} onClick={()=> onClose(id)}> X </button>
+         }
 
          <Link to={`/detail/${id}`} >
             <h3 className={style.nombres}>{ name }</h3>
